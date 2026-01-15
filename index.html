@@ -1,0 +1,62 @@
+
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asistente de Mantenimiento Preventivo de Flota</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Simulación del Agente de Mantenimiento Preventivo de Flota</h1>
+</header>
+
+<form id="evaluacionForm">
+  <!-- Formulario con inputs -->
+  <div class="form-group">
+    <label for="kilometraje">Kilometraje actual de la unidad (km):</label>
+    <input type="number" id="kilometraje" required />
+  </div>
+  <div class="form-group">
+    <label for="tiempo">Kilometraje del último mantenimiento (km):</label>
+    <input type="number" id="kilometraje" required />
+  </div>
+  <div class="form-group">
+    <label for="frecuencia">meses desde el último mantenimiento (meses):</label>
+    <input type="number" id="frecuencia" required />
+  </div>
+  <div class="form-group">
+    <label for="uso">Tipo de uso:</label>
+    <select id="uso" required>
+      <option value="urbano">Urbano</option>
+      <option value="carretera">Carretera</option>
+      <option value="mixto">Mixto</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="alertas">Alertas recientes:</label>
+    <select id="alertas" required>
+      <option value="ninguna">Ninguna</option>
+      <option value="pocas">Pocas</option>
+      <option value="varias">Varias</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="edad">Edad de la unidad (años):</label>
+    <input type="number" id="edad" required />
+  </div>
+  <button type="button" onclick="evaluar()">Evaluar</button>
+</form>
+
+<div class="resultado" id="resultado">
+  <h2>Resultado de la evaluación</h2>
+  <p class="nivel-riesgo" id="nivelRiesgo"></p>
+  <p><strong>Diagnóstico:</strong> <span id="diagnostico"></span></p>
+  <p><strong>Acción recomendada:</strong> <span id="accion"></span></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
